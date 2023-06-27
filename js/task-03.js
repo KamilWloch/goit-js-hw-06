@@ -12,3 +12,8 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryDes = document.querySelector('ul.gallery')
+const getLiNames = ({ url, alt }) => `<li class="task03-item"><img class="task03-img" src="${url}" alt="${alt}"/></li>`
+const getListNames = (imagesList) => imagesList.map(it => getLiNames(it)).join('')
+galleryDes.insertAdjacentHTML('afterbegin', getListNames(images));
