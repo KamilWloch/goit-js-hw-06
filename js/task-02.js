@@ -6,7 +6,7 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const ingridientsNames = document.querySelector('ul#ingridients');
-const getLiNames = (ingridient) => `<li class="item">${ingridient}</li>`
-const getListNames = (ingridientsList) => ingridientsList.map(it => getLiNames(it)).join('')
-ingridientsNames.insertAdjacentHTML('afterbegin', getListNames(ingredients));
+const ingredientsNames = document.querySelector('ul#ingredients');
+const getLiNames = (ingredient) => `<li class="item">${ingredient}</li>`
+const getListNames = (ingredientsList) => ingredientsList.map(it => getLiNames(it)).join('')
+ingredientsNames.insertAdjacentHTML('afterbegin', getListNames(ingredients));
