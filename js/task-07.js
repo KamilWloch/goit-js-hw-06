@@ -1,10 +1,16 @@
-const ref = {
-    input: document.querySelector('#font-size-control'),
-    text: document.querySelector('#text'),
-}
-handleBlurInput();
-ref.input.addEventListener('input', handleInput)
+const input = document.querySelector('#font-size-control');
+const text = document.querySelector('#text');
+text.style.fontSize = "56px";
 
-function handleInput() {
-    ref.text.style.fontSize = `${ref.input.value}px`
-}
+const changeFontSize = () => {
+    text.style.fontSize = input.value + "px";
+};
+
+input.addEventListener("input", changeFontSize);
+
+// handleBlurInput();
+// ref.input.addEventListener('input', handleInput)
+
+// function handleInput() {
+//     ref.text.style.fontSize = `${ref.input.value}px`
+// }
